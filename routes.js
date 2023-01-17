@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
-const authController = require('./controllers/authController');
-const expenseController = require('./controllers/expenseController').default;
+import authController from './controllers/authController.js';
+import expenseController from './controllers/expenseController.js';
 
 
 
@@ -36,6 +36,6 @@ router.all('/', (req, res) => {
     res.status(403).json({ message: "access forbidden" })
 })
 
-module.exports = router;
+export default router;
 
 // wcsb1DLpJCktEBdN
