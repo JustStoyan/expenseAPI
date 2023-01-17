@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const expenseService = require('../services/expenseService');
-const db = require('../db');
+import expenseService from '../services/expenseService';
+import { query } from '../db';
 
 router.get('/', async (req, res, next) => {
-    db.query('SELECT * FROM expenses', (err, result, fields) => {
+    query('SELECT * FROM expenses', (err, result, fields) => {
         if (err) throw err;
         res.json(result)
     })
@@ -31,4 +31,4 @@ router.delete('/delete/:expenseId', (req, res, next) => {
 
 })
 
-module.exports = router;
+export default router;

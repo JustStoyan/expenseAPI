@@ -1,9 +1,9 @@
-const db = require('../db');
+import { query } from '../db';
 
 const getRegistered = (email, name, password) => {
 
 
-    db.query(`INSERT INTO users  (email, name, password) VALUES ("${email}", "${name}", "${password}")`, (err, res, fields) => {
+    query(`INSERT INTO users  (email, name, password) VALUES ("${email}", "${name}", "${password}")`, (err, res, fields) => {
         if (err) {
             throw err
         } else {
@@ -22,7 +22,7 @@ const getLogged = () => {
 
 
 
-module.exports = {
+export default {
     getRegistered,
     getLogged
 }

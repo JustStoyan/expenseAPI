@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const authController = require('./controllers/authController');
-const expenseController = require('./controllers/expenseController');
+const expenseController = require('./controllers/expenseController').default;
 
 
 

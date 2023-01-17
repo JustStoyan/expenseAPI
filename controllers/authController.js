@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 
-const authService = require('../services/authService');
+const authService = require('../services/authService').default;
 
 router.post('/register', (req, res) => {
     bcrypt.genSalt(10, (err, salt) => {
