@@ -16,21 +16,21 @@ router.use('*', (req, res) => {
 
 
 
-router.post('/login', (req, res) => {
-    res.json({ page: "login" })
-})
+// router.post('/login', (req, res) => {
+//     res.json({ page: "login" })
+// })
 
-router.get('/expenses', (req, res) => {
-    res.json([{ name: "Bank", price: "120" }])
-})
+// router.get('/expenses', (req, res) => {
+//     res.json([{ name: "Bank", price: "120" }])
+// })
 
-router.post('/expenses/add', (req, res) => {
-    res.json({ name: "Bank", price: "120" })
-})
+// router.post('/expenses/add', (req, res) => {
+//     res.json({ name: "Bank", price: "120" })
+// })
 
-router.put('/expenses/:expenseId', (req, res) => {
-    res.json({ name: "Bank", price: "120" })
-})
+// router.put('/expenses/:expenseId', (req, res) => {
+//     res.json({ name: "Bank", price: "120" })
+// })
 
 router.all('/', (req, res) => {
     res.status(403).json({ message: "access forbidden" })

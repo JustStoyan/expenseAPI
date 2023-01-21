@@ -9,13 +9,14 @@ import routes from './routes.js';
 const app = express();
 const port = 5000;
 
+
+
 app.use(cors());
-app.use(json())
+app.use(json());
+
 
 
 app.use('/api', routes);
-
-
 
 
 

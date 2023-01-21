@@ -2,9 +2,10 @@ import connection from '../db.js';
 
 
 const createExpense = (expense) => {
+    console.log(expense)
     connection.query(`
     INSERT INTO expenses (expense_category,expense_name,expense_amount)
-     VALUES ("${expense.expenseCategory}", "${expense.expenseName}", "${expense.expenseAmount}")
+     VALUES ("${expense.category}", "${expense.name}", "${expense.amount}")
      `, (err, res, fields) => {
         if (err) throw err
     })

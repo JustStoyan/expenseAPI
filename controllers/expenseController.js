@@ -16,7 +16,6 @@ router.get('/', async (req, res, next) => {
 })
 
 router.post('/add', (req, res, next) => {
-    console.log(req.body)
     createExpense(req.body);
     res.json("Added")
 })
